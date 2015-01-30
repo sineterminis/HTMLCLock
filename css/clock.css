@@ -17,3 +17,24 @@ p {
 div {
   font-size : 4em;
 }
+
+.cold {
+    color : #95A5A6;
+}
+
+.chilly {
+    color : #1ABC9C;
+}
+
+.nice {
+    color : #2980B9;
+}
+
+.warm {
+    color : #E67E22;
+}
+
+.hot {
+    color : #E74C3C ;
+}
+
