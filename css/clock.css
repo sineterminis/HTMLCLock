@@ -9,13 +9,13 @@ p {
 }
 
 .redText {
-    font-size : 2em;
+    font-size : 1em; 
     color : red;
     font-family : Arial;
 }
 
 div {
-  font-size : 4em;
+  font-size : 1em; 
 }
 
 .cold {
