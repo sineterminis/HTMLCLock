@@ -5,12 +5,14 @@ h2 {
 .hide {
 	display:none;
 }
+
 .button {
 	display:block;
 	margin:10px auto;
 	width:100px;
 	padding:10px 10px;
 }
+
 .flexable {
 	display: -webkit-box;
 	display: -moz-box;
@@ -18,6 +20,7 @@ h2 {
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-flow: nowrap;
+    justify-content:space-around;
 }
 /********** The container that holds the alarm section *********/
 #alarmContainer {
@@ -35,9 +38,11 @@ h2 {
 	justify-content:flex-end;
 }
 #alarmHeader input {
-	position:absolute;
+	/*position:absolute;
 	right:0px;
 	margin:5px;
+    */
+    justify-content:space-between;
 }
 #alarms {
 	margin-top:20px;
