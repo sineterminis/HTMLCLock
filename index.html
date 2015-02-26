@@ -31,10 +31,10 @@
           var userId = response.userID;
           testAPI();
           getAllAlarms(userId);
-          $( "#addAlarm" ).removeClass();
-          $( "#deleteAlarm" ).removeClass();
-          $( "#addAlarm" ).addClass("button");
-          $( "#deleteAlarm" ).addClass("button");
+          // $( "#addAlarm" ).removeClass();
+          // $( "#deleteAlarm" ).removeClass();
+          // $( "#addAlarm" ).addClass("button");
+          // $( "#deleteAlarm" ).addClass("button");
         } else if (response.status === 'not_authorized') {
           // The person is logged into Facebook, but not your app.
           document.getElementById('status').innerHTML = 'Please log ' +
