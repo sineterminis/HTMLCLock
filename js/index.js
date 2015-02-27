@@ -68,6 +68,8 @@ function insertAlarm(hours, mins, ampm, alarmName) {
 } 
 
 function addAlarm() {
+    ga('send', 'event', 'Alarm', 'Add');
+
     var hours = $("#hours option:selected").text();
     var mins = $("#mins option:selected").text();
     var ampm = $("#ampm option:selected").text();
@@ -85,6 +87,8 @@ function addAlarm() {
 
 
 function deleteAlarm() {
+    ga('send', 'event', 'Alarm', 'Delete');
+    
     var name = window.prompt("enter name of alarm to delete", "alarm name");
     
     Parse.initialize("OVhbvBqf5heRgl1rjOiyJlVx60pvulpe8mrvKzeI","0NgvrXuZgZrrpijc6gYsTa8fUTcPIQXsAy1hiaHH");
