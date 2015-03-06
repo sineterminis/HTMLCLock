@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>Lab 9</title>
+    </head>
+    <body>
+      <h1> Lab 9 : OAuth Implict Grant </h1>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+      <script src="https://www.parsecdn.com/js/parse-1.3.4.min.js"> </script>
+      <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+      <script src="http://swip.codylindley.com/jquery.popupWindow.js"></script>
+      <script src="oauth.js" type="text/javascript" onload="init()"></script>
+
+      <input type="button" id="login" value="click to login" class="button" onclick="login()" />
+
+      <script type="text/javascript">
+      function callback_function () {
+          console.log("callback_function");
+          var token = localStorage.getItem('token');
+          console.log("token from storage: ", token);
+
+          $.ajax({
+              url: 'https://api.imgur.com/3/account/me',
+              method: 'GET',
+              headers: {
+                Authorization: 'Bearer ' + token,
+                Accept: 'application/json'
+              },
+              dataType: 'json',
+              success: function(result) {
+                var url = result.data.url;
+                console.log("name: ", url);
+                window.alert("user name: " + url);
+              }
+          });
+      }
+      </script>
+    </body>
+</html>
