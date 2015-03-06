@@ -33,6 +33,10 @@
                 var url = result.data.url;
                 console.log("name: ", url);
                 window.alert("user name: " + url);
+              },
+
+              error: function(result) {
+                console.log("error initiating oauth implicit grant flow");
               }
           });
       }
